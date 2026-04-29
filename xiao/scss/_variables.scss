@@ -1,0 +1,55 @@
+@font-face {
+   font-family: 'Helvetica-Regular';
+   src: url('../fonts/Helvetica-Regular.ttf');
+}
+@font-face {
+   font-family: 'Helvetica-Medium';
+   src: url('../fonts/helvetica-neue-medium.ttf');
+}
+@font-face {
+   font-family: 'Helvetica-Bold';
+   src: url('../fonts/Helvetica-Bold.ttf');
+}
+@font-face {
+   font-family: 'Helvetica-BoldOblique';
+   src: url('../fonts/Helvetica-BoldOblique.ttf');
+}
+@font-face {
+   font-family: 'iCiel-Nabila';
+   src: url('../fonts/Nabila.ttf');
+}
+
+@font-face {
+   font-family: 'Fira-Sans-Regular';
+   src: url('../fonts/fira-sans.regular.ttf');
+}
+
+@font-face {
+   font-family: 'Fira-Sans-Bold';
+   src: url('../fonts/fira-sans.bold.ttf');
+}
+
+@font-face {
+   font-family: '000-ObelixPro';
+   src: url('../fonts/000-ObelixPro-TB.ttf');
+}
+
+$fira_sans_regular: "Fira-Sans-Regular";
+$fira_sans_bold: "Fira-Sans-Bold";
+
+$font_obelix: '000-ObelixPro';
+
+
+$helvetica_regular: "Helvetica-Regular";
+$helvetica_bold: "Helvetica-Bold";
+$helvetica_medium: "Helvetica-Medium";
+$helvetica_BoldOblique: "Helvetica-BoldOblique";
+$iCiel_Nabila: 'iCiel-Nabila';
+
+$light_green: #9ad65f;
+$medium_green: #4e9f4d;
+$dark_green: #39932c;
+$color_orange: #f9e493;
+$color_black: #000000;
+$color_white: #ffffff;
+$color_base: #312b2b;

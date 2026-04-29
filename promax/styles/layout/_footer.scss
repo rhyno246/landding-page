@@ -1,0 +1,83 @@
+.footer{
+    background: $green-color;
+    margin-top: auto;
+    padding: 96px 0;
+    @include Mobile{
+        margin: 0 33px;
+        padding: 24px 0;
+    }
+    &-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 47px;
+        @include Mobile{
+            display: inherit;
+        }
+    }
+    &-logo{
+        width: 127px;
+        height: 44px;
+        display: block;
+        @include Mobile{
+            margin-bottom: 17px;
+        }
+    }
+    .copy-right{
+        color: $white-color;
+        font-size: 16px;
+        @include Mobile{
+            margin-bottom: 17px;
+        }
+    }
+    &-social{
+        display: flex;
+        align-items: center;
+        li{
+            margin-right: 16px;
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                display: block;
+            }
+        }
+    }
+    &-main{
+        padding-top: 47px;
+        border-top: 1px solid $white-color;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        &-item{
+            width: 270px;
+            @include Mobile{
+                &:last-child{
+                    li{
+                       &:last-child{
+                            margin-bottom: 0;
+                       }
+                    }
+                }
+            }
+            li{
+                margin-bottom: 24px;
+                &:last-child{
+                    margin-bottom: 0;
+                    @include Mobile{
+                        margin-bottom: 24px;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: $white-color;
+                    font-weight: 700;
+                    font-size: 20px;
+                    @include Mobile{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

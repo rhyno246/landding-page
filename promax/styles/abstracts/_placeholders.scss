@@ -1,0 +1,18 @@
+textarea, 
+input[type]:not([type=button]):not([type=search]),select {
+    background-color:transparent;
+    outline: none;
+    &::placeholder{
+         /* Firefox */
+         background-color:transparent;
+         color: $black;
+         font-weight: 700;
+    }
+    &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+        background-color:transparent;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+        background-color:transparent;
+    }
+}
+

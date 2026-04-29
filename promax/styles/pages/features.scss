@@ -1,0 +1,21 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../base/reset';
+@import '../base/base';
+@import '../base/typhography';
+@import '../components/title';
+@import '../components/thumbfill';
+@import '../components/button';
+@import '../components/card';
+@import '../layout/header';
+@import '../layout/footer';
+
+.promax-hot{
+    .custom-container{
+        max-width: 936px;
+    }
+}
+
+.block-title{
+    margin: 26px 0;
+}

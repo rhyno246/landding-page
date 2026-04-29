@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+body,
+html {
+    font-family: 'Roboto';
+    font-weight: 400;
+    line-height: 1.4;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.img-res {
+    max-width: 100%;
+    height: auto;
+}
+
+.show-pc{
+    display: block;
+    @include Tablet{
+        display: none;
+    }
+}
+
+.show-mb{
+    display: none;
+    @include Tablet{
+        display: block;
+    }
+}
+
+
+.custom-container {
+    width: 100%;
+    padding: 0 10px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1172px;
+    }
+}

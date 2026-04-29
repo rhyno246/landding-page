@@ -1,0 +1,648 @@
+@charset "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+@font-face {
+	font-family: 'SFUDinEngAlt';
+	src: url('../font/SFUDinEngAlt.TTF');
+	src: local('☺'), 
+       url('../font/SFUDinEngAlt.TTF') format('truetype');
+}
+@font-face {
+	font-family: 'iciel Cadena';
+	src: url('../font/iciel Cadena.ttf');
+	src: local('☺'), 
+       url('../font/iciel Cadena.TTF') format('truetype');
+}
+/* @font-face {
+	font-family: San Francisco Dislay;
+	src: url('../font/SanFranciscoDisplay-Black_0.otf') format('truetype');
+	src: url('../font/SanFranciscoDisplay-Bold_0.otf') format('truetype');
+	src: url('../font/SanFranciscoDisplay-Heavy_0.otf') format('truetype');
+	src: url('../font/SanFranciscoDisplay-Light_0.otf') format('truetype');
+	src: url('../font/SanFranciscoDisplay-Medium_0.otf') format('truetype');
+	src: url('../font/SanFranciscoDisplay-Regular_0.otf') format('truetype');
+	src: url('../font/SanFranciscoDisplay-Semibold_0.otf') format('truetype');
+	src: url('../font/SanFranciscoDisplay-Thin_0.otf') format('truetype');
+	src: url('../font/SanFranciscoDisplay-Ultralight_0.otf') format('truetype');
+} */
+body {
+	font-family: San Francisco Dislay;
+	font-size: 14px;
+	line-height: 20px;
+	color: #394350;
+}
+img {
+	max-width: 100%;
+}
+ul li {
+	list-style: none;
+}
+.clearfix:after {
+	content: "." !important;
+    clear: both !important;
+    display: block !important;
+    height: 0 !important;
+    visibility: hidden !important;
+}
+.title {
+	font-family: San Francisco Dislay;
+	font-size: 26px;
+	text-align: center;
+	color: #394350;
+}
+.hide {
+	display: none;
+}
+header h1 {
+	font-family: SFUDinEngAlt, sans-serif;
+	font-style: italic;
+	color: #006838;
+	text-align: center;
+	margin: 55px 0 33px;
+	font-size: 51px;
+	line-height: 51px;
+}
+header {
+	background-image: url("../img/key.png");
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	padding: 10px 0 0;
+	overflow: hidden;
+}
+header > * {
+	position: relative;
+	z-index: 1;
+}
+header .logo {
+	margin-bottom: 0;
+	padding-top: 20px;
+}
+header .hotline {
+	padding-right: .5rem;
+	margin-bottom: 0;
+	color: #be1e2d;
+}
+header .navbar {
+	padding: 0;
+}
+header .navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+}
+header .navbar-dark .navbar-nav .nav-link:focus,
+header .navbar-dark .navbar-nav .nav-link:hover {
+	color: #be1e2d;
+}
+.lamweb-banner {
+	padding-top: 5px;
+}
+header .lamweb-banner:before {
+	content: url('../img/key-left.png');
+	position: absolute;
+	bottom: -43px;
+    left: -158px;
+}
+header .lamweb-banner:after {
+	content: url('../img/key-right.png');
+	position: absolute;
+	bottom: -146px;
+	right: -167px;
+}
+.lamweb-banner form,
+.lamweb-banner img {
+	width: 100%;
+}
+.lamweb-banner .lamweb-cloud-bottom-left {
+	position: absolute;
+    width: 100%;
+    left: -22px;
+    bottom: -36px;
+    z-index: 1;
+}
+.lamweb-banner .lamweb-left {
+	z-index: 1; 
+}
+.lamweb-banner .lamweb-right {
+	min-height: 345px;
+	border: 1px solid #e0eef1;
+	padding: 10px 10px 16px;
+	background-color: #fff;
+  	font-size: 12px;
+}
+.lamweb-banner .lamweb-right .form-control {
+  	font-size: 12px;
+    height: 25px !important;
+    line-height: 25px;
+    border-radius: 0;
+    outline: none;
+}
+.lamweb-banner .lamweb-right h5 {
+	margin-top: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+	color: #bc2031; }
+.lamweb-banner .lamweb-right input, 
+.lamweb-banner .lamweb-right select {
+  	padding: 0 8px;
+}
+.lamweb-banner .lamweb-right button {
+	padding: 2px 20px;
+	background-color: #bc2031;
+	color: white;
+}
+.lamweb-banner .lamweb-right .form .strong {
+  	margin-bottom: 5px;
+}
+.lamweb-banner .lamweb-right .form-group {
+  	margin-bottom: 5px;
+}
+.lamweb-banner .lamweb-right .lamweb-cloud-bottom-right {
+  	bottom: -65px;
+}
+.lamweb-banner .lamweb-right .success {
+	font-size: 23px;
+	color: #3c7660;
+}
+main {
+	overflow: hidden;
+}
+main #sec1 {
+	padding: 12px 0 10px;
+	font-size: 18px;
+	line-height: 26px;
+}
+main #sec1 .pic {
+	margin-bottom: 0;
+}
+main #sec1 .pic img {
+	width: 100%;
+}
+main #sec1 .pic img.deco {
+	width: 50%;
+	position: absolute;
+	bottom: -10px;
+	right: -30%;
+}
+main #sec1 ul li:first-child {
+	border-right: 2px solid #fff;
+}
+main #sec1 ul li {
+	background-color: #006838;
+	text-align: center;
+	color: #fff;
+	width: 50%;
+	cursor: pointer;
+}
+main #sec1 ul li a {
+	display: block;
+	padding: 6px 0;
+}
+main #sec1 button.close {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 3rem;
+}
+main #sec1 .modal-body {
+	padding: 0;
+}
+main #sec1 .modal-body p {
+	margin-bottom: 0;
+}
+main #sec2 {
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	background-color: #f1ffdc;
+	padding: 24px 0 0;
+}
+main #sec2 h2 {
+	font-size: 23px;
+	letter-spacing: 0.5px;
+}
+main #sec2 .text-big {
+	font-family: iCiel Cadena;
+	color: #006838;
+	font-size: 23px;
+	font-weight: bold;
+	line-height: 30px;
+	margin-top: 16px;
+	padding-left: 7%;
+}
+main #sec2 .text-big span {
+	padding-left: 100px;
+}
+main #sec2 .pic {
+	margin-bottom: 0;
+}
+main #sec3 {
+	background-color: #f1ffdc;
+	padding: 20px 0 40px;
+	color: #231f20;
+}
+main #sec3 .pic {
+	text-align: center;
+}
+main #sec3 h3 {
+	text-align: center;
+	margin-bottom: 4%;
+}
+main #sec3 .title {
+	padding: 0 0 3%;
+	text-align: center;
+}
+main #sec3 .box {
+		width: 225px;
+    	margin: auto;
+	}
+main #sec4 {
+	padding: 20px 0 10px;
+}
+main #sec4 .sec-row {
+	padding-bottom: 70px;
+	position: relative;
+	margin-top: 3%;
+}
+main #sec4 p.text {
+	position: relative;
+	padding-left: 48px;
+	width: 30%;
+}
+main #sec4 p.text img {
+	position: absolute;
+	top: 2px;
+	left: 0;
+}
+main #sec5 {
+	background-color: #f1ffdc;
+	padding: 32px 0 0;
+}
+main #sec5 .title {
+	margin-bottom: 24px;
+}
+main #sec5 .col-md-3 {
+	position: relative;
+	margin-bottom: 1rem;
+	pointer-events: none;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+main #sec5 .col-md-3:hover .hover {
+	pointer-events: auto;
+	opacity: 1;
+}
+main #sec5 .hover {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	z-index: 1;
+	height: 100%;
+	background-color: #fff;
+	width: 200%;
+	text-align: left;
+	padding: 15px;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: all ease .3s;
+	-o-transition: all ease .3s;
+	transition: all ease .3s;
+}
+main #sec5 p.pic {
+	pointer-events: auto;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+main #sec5 .hover h3 {
+	font-size: 15px;
+	font-weight: bold;
+}
+main #sec6 {
+	background: url('../img/sec6_bg.png') repeat-x center bottom;
+	background-color: #f1ffdc;
+	padding: 16px 0 0;
+}
+main #sec6 .title {
+	margin-bottom: 18px;
+}
+main #sec6 .set {
+	background: url('../img/sec6_rp.png') repeat center top;
+}
+main #sec6 .row {
+	padding: 18px 100px;
+}
+#footer {
+	background-color: #bd1e2c;
+	color: #fff;
+}
+#footer .footerT {
+	padding: 3% 0 2%;
+}
+#footer h3 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+#footer .soicial a {
+	margin: 0 5px;
+}
+#footer .footerB {
+	border-top: 1px solid #000;
+	padding: 15px 0 0;
+}
+#footer .partner a {
+	margin-right: 60px;
+}
+@media (min-width: 1200px) {
+	.container {
+	    max-width: 986px;
+	}
+	.lamweb-banner .col-left {
+	    float: left;
+	    width: 604px;
+	}
+	.lamweb-banner .col-right {
+	    padding-right: 15px;
+	    float: right;
+	    width: 340px;
+	}
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+	.lamweb-banner .col-left {
+	    float: left;
+	    width: 590px;
+	}
+	.lamweb-banner .col-right {
+	    padding-right: 15px;
+	    float: right;
+	    width: 330px;
+	}
+}
+@media screen and (min-width: 993px) {
+	.lamweb-banner .lamweb-cloud-bottom-left {
+		position: absolute;
+	    width: 635px;
+	    max-width: inherit;
+	    left: -34px;
+	    bottom: -36px;
+	    z-index: 1;
+	}
+	.lamweb-banner .col-right .col-md-4 {
+		padding-right: 0;
+	}
+	main #sec2 {
+		background-image: url('../img/sec2_bg.png');
+	}
+	main #sec2 .pic {
+		opacity: 0;
+	}
+}
+@media screen and (min-width: 769px) {
+	main #sec1 .text {
+		padding-top: 10px;
+	}
+	main #sec4  p.text.text1 {
+		position: absolute;
+		top: 91px;
+		left: 0;
+	}
+	main #sec4  p.text.text2 {
+		position: absolute;
+		top: 91px;
+		right: 0;
+	}
+	main #sec4  p.text.text3 {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		margin-bottom: 0;
+	}
+	main #sec5 .hover.tooltip-left {
+		right: 100%;
+		left: auto;
+	}
+	main #sec5 .hover:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+	    width: 0;
+	    height: 0;
+	    margin-top: -5px;
+	    border-bottom: 10px solid transparent;
+	    border-top: 10px solid transparent;
+	}
+	main #sec5 .hover.tooltip-left:before {
+		right: -20px;
+	    border-left: 20px solid #fff;
+	}
+	main #sec5 .hover.tooltip-right:before {
+	    border-right: 20px solid #fff;
+		left: -20px;
+	}
+}
+@media (min-width: 769px) and (max-width: 992px) {
+	main #sec4 p.text.text1 {
+		top: 78px;
+	}
+	main #sec4 p.text.text2 {
+		top: 78px;
+	}
+}
+@media screen and (max-width: 992px) {
+	header {
+		background-position: center bottom;
+	}
+	img.deco {
+		display: none;
+	}
+	main #sec4 .sec-row {
+	    padding-bottom: 16%;
+	}
+	main #sec4 .sec-row .pic {
+	    max-width: 270px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.lamweb-banner .lamweb-left {
+		margin-bottom: 60px;
+	}
+}
+@media screen and (max-width: 768px) {
+	header {
+		padding: 60px 0 120px;
+	}
+	header h1 {
+	    margin: 10px 0 -100px;
+	    font-size: 32px;
+	    line-height: 51px;
+	}
+	header .top-header {
+		position: fixed;
+	    top: 0;
+	    left: 0;
+	    background: #77ced8;
+	    z-index: 100;
+	    border-bottom: 2px solid #b91f2f;
+    	padding-bottom: 2px;    
+    	width: 100%;
+    	max-width: 100%;
+	}
+	header .top-header a {
+	    color: #000 !important;
+	}
+	header .logo {
+		padding: 10px 0;
+		margin-bottom: 0;
+	}
+	header .hotline {
+		padding-right: 0;
+		display: none;
+	}
+	header .navbar-toggler {
+		position: absolute;
+	    top: -43px;
+	    right: 0;
+	    background: #b91f2f !important;
+	}
+	main .secpd {
+		padding: 20px 0 !important;
+	}
+	header .lamweb-banner:after {
+		display: none;
+	}
+	.lamweb-banner .lamweb-cloud-bottom-left {
+		display: none;
+	}
+	.lamweb-banner .lamweb-left {
+		margin-bottom: 10px;
+	}
+	main #sec1 ul li a {
+	    font-size: 14px;
+	}
+	main #sec2 .text-big {
+	    font-size: 20px;
+	    margin-top: 5px;
+	}
+	main #sec4 .sec-row {
+	    padding-bottom: 0;
+	}
+	main #sec4 p.text {
+	    width: auto;
+	}
+	main #sec5 .hover {
+		top: 100%;
+		left: 0;
+		height: auto;
+		width: 100%;
+	}
+	main #sec5 .hover:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -5px;
+	    margin-top: -10px;
+	    width: 0;
+	    height: 0;
+	    border-right: 10px solid transparent;
+	    border-left: 10px solid transparent;
+    	border-bottom: 20px solid #fff;
+	}
+	main #sec6 {
+		padding: 0;
+	}
+	main #sec6 .row {
+		padding: 10px 0 0;
+	}
+	.slide-position-images {
+	    right: 0 !important;
+	    width: 25% !important;
+	}
+}
+@media only screen and (min-device-width :1024px) and (max-device-width :1366px) and (orientation :portrait){
+	img.deco{
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+.box {
+    position: relative;
+    /* z-index: 9999999999999999; */
+}
+.modal-backdrop{
+  z-index: -5 !important;
+}
+
+.slick-slide{
+	height: auto !important;
+}
+.secpd {
+    position: relative;
+}
+.slide-position-images {
+    position: absolute;
+    bottom: 0;
+    right: 16%;
+    z-index: 9;
+}
+.owl-item {
+    padding: 0 5px;
+}
+input.form-control {
+    position: relative;
+    z-index: 9999999999999999999999999999;
+}
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 50px;
+    visibility: hidden;
+    transition: all 0.6s ease 0s;
+    transform: translateX(100px)
+}
+#myBtn.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0)
+}
+.event-btn a {
+    padding: 5px 20px;
+    background-color: #bc2031;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.event-btn{
+    margin: 20px 0;
+}
+.mg20 {
+    margin-top: 38px;
+}

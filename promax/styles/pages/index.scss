@@ -1,0 +1,206 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../base/reset';
+@import '../base/base';
+@import '../base/typhography';
+@import '../components/block';
+@import '../components/title';
+@import '../components/thumbfill';
+@import '../components/button';
+@import '../components/slider';
+@import '../layout/header';
+@import '../layout/footer';
+
+
+.fix-width{
+    max-width: 1460px;
+    margin: 0 auto;
+}
+.top-banner{
+    @include Tablet{
+        padding: 0 33px;
+    }
+    img{
+        width: 100%;
+        display: block
+    }
+}
+.mid-banner{
+    @extend .top-banner;
+}
+
+.promax-hot{
+    &-news{
+        margin-top: 48px;
+        @include grid(2 ,1fr, 24px);
+        @include Tablet{
+            margin-top: 24px;
+        }
+        @include Mobile{
+            display: inherit;
+            padding: 0 40px;
+        }
+        &__item{
+            border-radius: 20px;
+            background: rgba(225, 225, 225, 0.50);
+            padding: 64px 105px 24px 24px;
+            position: relative;
+            @include Tablet{
+                padding: 64px 24px 24px 24px;
+            }
+            @include Mobile{
+                padding: 24px;
+                margin-bottom: 24px;
+                display: flex;
+                flex-direction: column;
+            }
+            .heading-item{
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 7px;
+                color: $black-color;
+                line-height: 1.5;
+                @include Mobile{
+                    font-size: 20px;
+                    order: 2;
+                    line-height: 1;
+                    margin-bottom: 0;
+                }
+            }
+            .description-item{
+                font-size: 16px;
+                margin-bottom: 9px;
+                color: rgba(0, 0, 0, 0.50);
+                @include Mobile{
+                    display: none;
+                }
+            }
+            .view-more{
+                margin-bottom: 16px;
+                a{
+                    color: $black-color;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+                @include Mobile{
+                    display: none;
+                }
+            }
+            .img-item{
+                border-radius: 15px;
+                min-height: 363px;
+                @include Mobile{
+                    min-height: 330px;
+                    margin-bottom: 15px;
+                }
+                a{
+                    display: block;
+                    img{
+                        display: block;
+                    }
+                }
+            }
+            .icon-item{
+                display: block;
+                position: absolute;
+                top: -15px;
+                left: 15px;
+                @include Mobile{
+                    top: -15px;
+                    left: -28px;
+                    width: 64px;
+                    height: 64px;
+                }
+                img{
+                    display: block;
+                }
+            }
+        }
+    }
+    .custom-button{
+        margin: 55px 0 74px 0;
+    }
+}
+
+.user-use{
+    padding: 96px 0;
+    background: rgba(225, 225, 225, 0.50);
+    @include Mobile{
+        padding: 24px 0;
+        margin: 0 20px;
+    }
+    #slider-user{
+        margin-left: 100px;
+        margin-top: 58px;
+        @include Tablet{
+            margin-left: 0;
+        }
+        @include Mobile{
+            @include grid(5 , 270px, 24px);
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            margin-top: 20px;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+        .slick-list {
+            margin: 0 -12px; 
+        }
+        .slick-slide { /* spacing in between each slide */
+            padding: 0 12px;
+        }
+    }
+    .relative-img-gradient{
+        position: relative;
+        .slide-gradient{
+            position: absolute;
+            right: -14px;
+            top: 2px;
+            height: 100%;
+            width: 250px;
+            &.show-mb{
+                left: 0;
+                right: auto;
+                width: 100px;
+            }
+        }
+    }
+}
+
+.user-question{
+    padding: 48px 0;
+    .block-title{
+        margin-bottom: 48px;
+    }
+    .list-question{
+        max-width: 956px;
+        margin: 0 auto;
+        @include Mobile{
+            padding: 0 25px;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            border: 1px solid rgba(0, 0, 0, 0.50);
+            border-radius: 16px;
+            margin-bottom: 24px;
+            gap: 24px;
+            @include Mobile{
+                font-size: 16px;
+            }
+            &.answer{
+                display: none;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

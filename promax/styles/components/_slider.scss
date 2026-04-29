@@ -1,0 +1,39 @@
+.slider-custom{
+    .slider-item{
+        position: relative;
+        .img-slide{
+            border-radius: 100px;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.50);
+            width: 140px;
+            height: 140px;
+            overflow: hidden;
+            position: absolute;
+            top: 20px !important;
+            right: 50% !important;
+            transform: translate(50%, 0) !important;
+            @include Mobile{
+                top: 0;
+                transform: translate(50%, -50%);
+            }
+        }
+        .text-slide{
+            background: $white-color;
+            border-radius: 20px;
+            padding: 110px 24px 24px 24px;
+            margin-top: 85px;
+            @include Mobile{
+                margin-top: 95px;
+            }
+            .heading-slide{
+                font-size: 20px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            .description{
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+    }
+}

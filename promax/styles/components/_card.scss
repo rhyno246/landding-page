@@ -1,0 +1,47 @@
+.card-horizontal{
+    @include grid(2 ,1fr, 88px);
+    margin-bottom: 96px;
+    @include Mobile{
+        display: inherit;
+        margin: 24px 15px;
+        border-radius: 25px;
+        border: 1px solid $black-color;
+        padding: 24px;
+    }
+    &-img{
+        border-radius: 16px;
+    }
+    &-title{
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        @include Mobile{
+            margin-top: 16px;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+    }
+    &-desc{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        @include Mobile{
+            display: none;
+        }
+    }
+    .custom-button{
+        text-align: left;
+        @include Mobile{
+            display: none;
+        }
+    }
+    &:nth-child(even){
+        .card-horizontal-group{
+            order: 1;
+        }
+        .card-horizontal-img{
+            order: 2;
+        }
+    }
+}

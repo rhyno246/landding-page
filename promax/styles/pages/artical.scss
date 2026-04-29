@@ -1,0 +1,83 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../base/reset';
+@import '../base/base';
+@import '../base/typhography';
+@import '../components/title';
+@import '../components/thumbfill';
+@import '../components/button';
+@import '../components/card';
+@import '../layout/header';
+@import '../layout/footer';
+
+.categorry-button{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    .custom-button{
+        text-align: left;
+        margin-right: 24px;
+        a{
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    .date{
+        font-size: 16px;
+    }
+}
+.title-categorry{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.title-content{
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 24px;
+    @include Mobile{
+        margin-top: 16px;
+        font-size: 26px
+    }
+}
+
+.categorry-button{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    .custom-button{
+        text-align: left;
+        margin-right: 24px;
+        a{
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    .date{
+        font-size: 16px;
+    }
+}
+.title-categorry{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.title-content{
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 24px;
+    @include Mobile{
+        margin-top: 16px;
+        font-size: 26px
+    }
+}
+.content{
+    margin: 50px 0;
+    @include Mobile{
+        margin: 20px 0;
+    }
+}

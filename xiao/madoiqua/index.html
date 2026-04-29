@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <title>XUXIFARM - Đăng ký nhận thưởng</title>
+   <link rel="shortcut icon" href="../images/favicon.png">
+   <!-- Bootstrap Core CSS -->
+   <link href="../plugins/bootstrap-4.6.1/css/bootstrap.min.css" rel="stylesheet">
+   <link href="../plugins/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet">
+   <!-- style -->
+   <link href="../css/styles.css?v=310825454542" rel="stylesheet">
+</head>
+
+<body>
+   <div class="register-wrapper">
+      <div class="register" id="register">
+         <!-- <img src="./images/register-gift-exchange-box.png" class="register-box-img" /> -->
+         <img src="./images/bg-0001.png" class="register-box-img" />
+         <!-- <img src="./images/frame-retangle-register.png" class="register-box-img" /> -->
+         <div class="register-container">
+            <div class="register-content">
+               <div class="register-title">
+                  <img src="./images/title-register-form.png" />
+               </div>
+               <div class="register-description">
+                  <div class="register-description-text d-none d-md-block">
+                     Điền thông tin và địa chỉ của bạn vào các ô dưới đây và nhấn gửi để Xuxifarm liên hệ<br/>
+                     và hướng dẫn cách thức nhận thưởng nhé!
+                  </div>
+                  <div class="register-description-text d-block d-md-none">
+                     Điền thông tin và địa chỉ của bạn vào các ô dưới đây và nhấn gửi để Xuxifarm liên hệ
+                     và hướng dẫn cách thức nhận thưởng nhé!
+                  </div>
+               </div>
+               <form class="form-container" data-parsley-validate="" >
+                  <div class="form-group">
+                     <div class="form-item form-item-big">
+                        <div class="form-bg"></div>
+                        <input type="text" name="username" class="form-control" placeholder="Họ và tên">
+                     </div>
+                     <div class="form-item">
+                        <div class="form-bg"></div>
+                        <input type="text" name="phone" class="form-control" placeholder="Số điện thoại"
+                        data-parsley-trigger="keyup" data-parsley-minlength="10" 
+                        data-parsley-trigger="change"
+                        data-parsley-maxlength="10" data-parsley-maxlength-message="SĐT quá 10 chữ số" 
+                        data-parsley-minlength-message="SĐT không đúng!" 
+                        data-parsley-validation-threshold="5"
+                        data-parsley-required data-parsley-required-message="Xin nhập số điện thoại"
+                        >
+                   
+                     </div>
+
+                  </div>
+                  <div class="form-group three-item">
+                     <div class="form-item">
+                        <div class="form-bg"></div>
+                        <select class="custom-select" id="city" name="city">
+                           <option value="" selected>Tỉnh/Thành phố</option>
+                         </select>
+                     </div>
+                     <div class="form-item">
+                        <div class="form-bg"></div>
+                        <select class="custom-select" id="district" name="district">
+                           <option value="" selected>Quận/Huyện</option>
+                        </select>
+                     </div>
+                     <div class="form-item">
+                        <div class="form-bg"></div>
+                        <select class="custom-select" id="wards" name="wards">
+                           <option value="" selected>Phường/xã</option>
+                        </select>
+                        <!-- <input type="text" name="wards" class="form-control" placeholder="Phường/xã"> -->
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <div class="form-item form-item-big">
+                        <div class="form-bg"></div>
+                        <input type="text" name="address" class="form-control" placeholder="Địa chỉ">
+                     </div>
+                     <div class="form-item">
+                        <div class="form-bg"></div>
+                        <input type="text" name="cmnd" class="form-control" placeholder="CMND">
+                     </div>
+                  </div>
+               </form>
+
+            </div>
+         </div>
+         <div class="btn-register">
+            <img src="./images/btn-send.png" class="btn-send-img" />
+         </div>
+      </div>
+   </div>
+
+   <!-- popup alert -->
+   <div id="modal-alert" class="modal modal-alert alert-error fade" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="modal-alert-body">
+                  <img src="./images/bg-0001.png" class="alert-box-bg" />
+                  <!-- <img src="./images/register-gift-exchange-box.png" class="alert-box-bg" /> -->
+                  <div class="modal-alert-container">
+                     <div class="modal-alert-detail">
+                        <div class="modal-alert-title" id="title-alert">
+                           Có lỗi xảy ra!
+                        </div>
+                        <div class="modal-alert-text" id="description-alert">
+                           <p>Không tìm thấy mã số khi quét QR code, vui lòng đóng trình duyệt và quét lại mã QR code trên thẻ.</p>
+                        </div>
+                        <div class="alert-action">
+                           <a class="btn-alert" href="../index.html">
+                              Về trang chủ
+                           </a>
+                        </div>
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="modal-alert-success" class="modal modal-alert fade" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="modal-alert-body">
+                  <img src="./images/bg-0001.png" class="alert-box-bg" />
+                  <!-- <img src="./images/register-gift-exchange-box.png" class="alert-box-bg" /> -->
+                  <div class="modal-alert-container alert-msg">
+                     <div class="modal-alert-detail">
+                        <div class="modal-alert-title" id="title-alert">
+                           Thông báo
+                        </div>
+                        <div class="modal-alert-text">
+                           <p  class="sub-title">
+                              Xin chúc mừng !!!
+                           </p>
+                           <div class="description-text">
+                              Bạn là một trong những người may mắn đã trúng giải từ chương trình khuyến mãi “Săn thẻ đấu - nhận quà ngầu”.
+                           </div>
+                           <div class="description-text">
+                              Vui lòng liên hệ hotline 1900 6880 để biết thêm chi tiết. <br/>
+                              hoặc Xuxifarm sẽ liên hệ trao quà thưởng tới bạn trong thời gian sớm nhất.
+                           </div>
+                        </div>
+                        <div class="alert-action">
+                           <a class="btn-alert" href="./index.html">
+                              Về trang chủ
+                           </a>
+                           <button class="btn-alert" data-dismiss="modal" aria-label="Close">
+                              Đóng
+                           </button>
+                        </div>
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="modal-alert-prize-travel" class="modal modal-alert fade" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="modal-alert-body">
+                  <img src="./images/bg-0001.png" class="alert-box-bg" />
+                  <!-- <img src="./images/register-gift-exchange-box.png" class="alert-box-bg" /> -->
+                  <div class="modal-alert-container alert-msg">
+                     <div class="modal-alert-detail">
+                        <div class="modal-alert-title" id="title-alert">
+                           Thông báo
+                        </div>
+                        <div class="modal-alert-text">
+                           <p  class="sub-title">
+                              Xin chúc mừng !!!
+                           </p>
+                           <div class="description-text">
+                              Bạn là một trong những người may mắn đã trúng giải Chuyến du lịch Tropicana Hồ Tràm dành cho gia đình từ chương trình khuyến mãi “Săn thẻ đấu - nhận quà ngầu”.
+                           </div>
+                           <div class="description-text">
+                              Xuxifarm sẽ liên hệ trao quà thưởng tới bạn trong thời gian sớm nhất.
+                           </div>
+                        </div>
+                        <div class="alert-action">
+                           <a class="btn-alert" href="./index.html">
+                              Về trang chủ
+                           </a>
+                           <button class="btn-alert" data-dismiss="modal" aria-label="Close">
+                              Đóng
+                           </button>
+                        </div>
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="modal-alert-prize-car-toy" class="modal modal-alert fade" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="modal-alert-body">
+                  <img src="./images/bg-0001.png" class="alert-box-bg" />
+                  <!-- <img src="./images/register-gift-exchange-box.png" class="alert-box-bg" /> -->
+                  <div class="modal-alert-container alert-msg">
+                     <div class="modal-alert-detail">
+                        <div class="modal-alert-title" id="title-alert">
+                           Thông báo
+                        </div>
+                        <div class="modal-alert-text">
+                           <p  class="sub-title">
+                              Xin chúc mừng !!!
+                           </p>
+                           <div class="description-text">
+                              Bạn là một trong những người may mắn đã trúng giải xe thăng bằng siêu đỉnh 
+                              từ chương trình khuyến mãi “Săn thẻ đấu - nhận quà ngầu”.
+                           </div>
+                           <div class="description-text">
+                              Xuxifarm sẽ liên hệ trao quà thưởng tới bạn trong thời gian sớm nhất.
+                           </div>
+                        </div>
+                        <div class="alert-action">
+                           <a class="btn-alert" href="./index.html">
+                              Về trang chủ
+                           </a>
+                           <button class="btn-alert" data-dismiss="modal" aria-label="Close">
+                              Đóng
+                           </button>
+                        </div>
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="modal-alert-failed" class="modal modal-alert fade" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="modal-alert-body">
+                  <img src="./images/bg-0001.png" class="alert-box-bg" />
+                  <!-- <img src="./images/register-gift-exchange-box.png" class="alert-box-bg" /> -->
+                  <div class="modal-alert-container alert-msg">
+                     <div class="modal-alert-detail">
+                        <div class="modal-alert-title" id="title-alert">
+                           Thông báo
+                        </div>
+                        <div class="modal-alert-text" id="description-alert">
+                           <!-- <p  class="sub-title">
+                              Chào bạn,
+                           </p> -->
+                           <div class="description-text">
+                              Mã QR code này không hợp lệ do đã được sử dụng trước đó hoặc nhập không đúng.
+                           </div>
+                           <div class="description-text">
+                              Vui lòng liên hệ hotline 1900 6880 để biết thêm chi tiết. <br/>
+                              Tiếp tục sưu tầm thẻ đấu trong mỗi ly xúc xích dinh dưỡng Xuxifarm 
+                              để có cơ hội trúng nhiều quà thưởng hấp dẫn bạn nhé!
+                           </div>
+                        </div>
+                        <div class="alert-action">
+                           <button class="btn-alert" data-dismiss="modal" aria-label="Close">Đóng</button>
+                        </div>
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- jQuery Version 3.3.1  -->
+   <script src="../js/jquery.js?v=3.3.1"></script>
+   <script src="../js/parsley.js?234242"></script>
+   <script src="../plugins/jquery-confirm/dist/jquery-confirm.min.js"></script>
+   <!-- Bootstrap Core JavaScript -->
+   <script src="../plugins/bootstrap-4.6.1/js/bootstrap.min.js"></script>
+   <!-- Common JS -->
+ 
+   <!-- <script src="js/districts.min.js"></script> -->
+   <script src="../js/register.js?v=310820221"></script>
+
+   <script>
+      // window.addEventListener('load',function(){
+         // $('#modal-alert-failed').modal({ show: true });
+      // })
+   </script>
+</body>
+
+</html>

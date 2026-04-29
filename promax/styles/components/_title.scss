@@ -1,0 +1,9 @@
+.block-title{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    @include Tablet{
+        font-size: 23px;
+        text-transform: uppercase;
+    }
+}
